@@ -1,0 +1,13 @@
+canvas{
+    border: 2px dashed black;
+    animation-name:aarav;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.btn-success:hover{
+    background-color: blueviolet;
+}
+@keyframes aarav{
+    from{box-shadow: 1px 1px 38px cyan;}
+    to{box-shadow: 1px 1px 38px blueviolet;}
+}
