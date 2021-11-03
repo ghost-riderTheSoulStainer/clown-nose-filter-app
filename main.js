@@ -30,5 +30,5 @@ function gotposes(results){
     }
 }
 function preload(){
-    clown_nose=loadImage('https://i.postimg.cc/qB3xhSX0/clown.png');
+    clown_nose=loadImage('https://i.postimg.cc/7ZBcjDqp/clownnose.png');
 }
