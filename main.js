@@ -1,3 +1,6 @@
+noseX=0;
+noseY=0;
+
 function take_snapshot(){
     save('mywebsite.png');
 }
@@ -12,6 +15,7 @@ function setup(){
 }
 function draw(){
     image(picture,0,0,300,300);
+    image(clown_nose,noseX,noseY,30,30);
 }
 function modelloaded(){
     console.log("posenet is initialized");
@@ -19,7 +23,12 @@ function modelloaded(){
 function gotposes(results){
     if(results.length>0){
         console.log(results);
-        console.log("Nose x="+results[0].pose.nose.x);
-        console.log("Nose y="+results[0].pose.nose.y);
+        noseX=results[0].pose.nose.x-15;
+        noseY=results[0].pose.nose.y-15;
+        console.log("Nose x="+noseX);
+        console.log("Nose y="+noseY);
     }
+}
+function preload(){
+    clown_nose=loadImage('https://i.postimg.cc/qB3xhSX0/clown.png');
 }
